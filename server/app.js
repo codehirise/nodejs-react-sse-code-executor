@@ -8,7 +8,7 @@ app.use(cors());
 // required to run commands on host
 const { spawn } = require("child_process");
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // run route handler
 app.get("/run", async (request, response) => {
@@ -94,6 +94,13 @@ app.get("/run", async (request, response) => {
     runCommand.kill();
   });
 });
+
+app.get("/run", async (request, response) => {
+  console.log(request)
+  console.log("this is run")
+
+  return response.json({data:[]})
+}
 
 // http server listen on given port
 app.listen(PORT, () => {

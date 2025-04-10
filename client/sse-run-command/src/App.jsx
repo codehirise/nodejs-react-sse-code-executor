@@ -191,7 +191,7 @@ function App() {
                 <p className="mr-2 text-sky-400">{`${data?.time} : `}</p>
                 <p>{data.type}</p>
               </div>
-              <p>{data.out}</p>
+             <span>{index} <p>{data.out}</p>
             </div>
           ))}
         </div>
