@@ -95,6 +95,8 @@ app.get("/run", async (request, response) => {
   });
 });
 
+app.use("/api",require("./routes"));
+
 app.get("/run", async (request, response) => {
   console.log(request)
   console.log("this is run")
